@@ -1,4 +1,4 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "idn2"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'idn2'
 
-require "minitest/autorun"
+require 'minitest/autorun'
