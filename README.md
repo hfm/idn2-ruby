@@ -1,8 +1,10 @@
-# Idn2
+# Idn2: Libidn2 Ruby Bindings
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/idn2`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby Bindings for the [GNU libidn2](https://gitlab.com/libidn/libidn2) library, which is an implementation of IDNA2008 and TR46. This provides encoding and decoding internationalized domain names.
 
-TODO: Delete this and the text above, and describe your gem
+## Requirements
+
+- [GNU libidn2](https://gitlab.com/libidn/libidn2) library (>~ 2.0)
 
 ## Installation
 
