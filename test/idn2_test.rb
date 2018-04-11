@@ -5,7 +5,7 @@ class Idn2Test < Minitest::Test
     refute_nil ::Idn2::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_that_it_has_a_library_version_number
+    refute_nil ::Idn2::IDN2_VERSION
   end
 end
