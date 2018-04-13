@@ -2,4 +2,37 @@ sudo: false
 language: ruby
 rvm:
   - 2.5.1
-before_install: gem install bundler -v 1.16.1
+addons:
+  apt:
+    packages:
+      - abi-compliance-checker
+      - autoconf
+      - automake
+      - autopoint
+      - gengetopt
+      - git
+      - git2cl
+      - gperf
+      - gtk-doc-tools
+      - lcov
+      - libc6
+      - libtool
+      - libunistring-dev
+      - libunistring0
+      - ruby-ronn
+      - texinfo
+      - valgrind
+before_install:
+  - gem install bundler -v 1.16.1
+  - curl -sS https://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.xz | tar xJ
+  - cd gettext-0.19.8.1
+  - ./configure --quiet --prefix="$HOME" --disable-acl
+  - make -s V=1
+  - make -s install
+  - cd ..
+  - git clone --depth 1 --recursive https://gitlab.com/libidn/libidn2
+  - cd libidn2
+  - sh bootstrap
+  - ./configure --prefix="$HOME" --disable-doc
+  - make install
+
