@@ -1,4 +1,5 @@
-sudo: false
+sudo: required
+dist: trusty
 language: ruby
 rvm:
   - 2.5.1
@@ -26,13 +27,13 @@ before_install:
   - gem install bundler -v 1.16.1
   - curl -sS https://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.xz | tar xJ
   - cd gettext-0.19.8.1
-  - ./configure --quiet --prefix="$HOME" --disable-acl
+  - ./configure --quiet --disable-acl
   - make -s V=1
-  - make -s install
+  - sudo make -s install
   - cd ..
   - git clone --depth 1 --recursive https://gitlab.com/libidn/libidn2
   - cd libidn2
   - sh bootstrap
-  - ./configure --prefix="$HOME" --disable-doc
-  - make install
+  - ./configure --disable-doc
+  - sudo make install
 
