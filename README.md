@@ -1,4 +1,4 @@
-# Idn2: Libidn2 Ruby Bindings
+# Idn2: Libidn2 Ruby Bindings [![Build Status](https://travis-ci.org/hfm/idn2-ruby.svg?branch=master)](https://travis-ci.org/hfm/idn2-ruby)
 
 Ruby Bindings for the [GNU libidn2](https://gitlab.com/libidn/libidn2) library, which is an implementation of IDNA2008 and TR46. This provides encoding and decoding internationalized domain names.
 
